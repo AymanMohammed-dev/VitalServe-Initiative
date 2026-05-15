@@ -1,19 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Donate - VitalServe Initiative</title>
-  <style>
-    body { font-family: Inter; text-align:center; padding:60px; background:#f7f9fc; }
-    .box {
-      background:white;
-      padding:30px;
-      border-radius:16px;
-      max-width:600px;
-      margin:auto;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Donate - VitalServe</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  * {margin:0; padding:0; box-sizing:border-box; font-family:Inter;}
+  body {background:#f6f9fc; color:#1e2a3a;}
+
+  nav {
+    display:flex; justify-content:center; gap:30px;
+    padding:16px; background:white; border-bottom:1px solid #e6eaf0;
+  }
+
+  nav a {text-decoration:none; color:#2b4c7e; font-weight:600;}
+  nav a:hover {color:#0b5cff;}
+
+  .container {
+    max-width:800px;
+    margin:auto;
+    padding:60px 20px;
+    text-align:center;
+  }
+
+  .card {
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  h1 {color:#0b2d5c; margin-bottom:15px;}
+  p {color:#4a5a70; line-height:1.6;}
+</style>
 </head>
+
 <body>
 
 <nav>
@@ -23,31 +46,13 @@
   <a href="donate.html">Donate</a>
 </nav>
 
-<div class="box">
-  <h1>Donate Supplies</h1>
-  <p>
-    Help us provide essential medical supplies to communities in need.
-  </p>
-
-  <p><strong>We currently accept:</strong><br>
-  Masks, gloves, bandages, sanitizer</p>
-
-  <p>Donation form coming soon (Google Form integration next step).</p>
+<div class="container">
+  <div class="card">
+    <h1>Donate Supplies</h1>
+    <p>Help us provide essential medical supplies to communities in need.</p>
+    <p><strong>We accept:</strong> masks, gloves, bandages, sanitizer</p>
+  </div>
 </div>
 
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="donate.html">Donate</a>
-</nav>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="donate.html">Donate</a>
-</nav>
-  
 </body>
 </html>

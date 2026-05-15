@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VitalServe Initiative</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -20,49 +18,26 @@
     body {
       background: radial-gradient(circle at top, #eaf2ff, #f7f9fc);
       color: #1e2a3a;
-      line-height: 1.6;
-    }
-
-    /* HERO */
-    .hero {
       text-align: center;
-      padding: 90px 20px 70px;
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      letter-spacing: -1px;
-      color: #0b2d5c;
-    }
-
-    .hero p {
-      margin-top: 12px;
-      font-size: 1.2rem;
-      color: #4a5a70;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     /* NAV */
     nav {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 14px 20px;
-      position: sticky;
-      top: 0;
+      gap: 25px;
+      padding: 14px;
       background: rgba(255,255,255,0.7);
       backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
-      z-index: 100;
     }
 
     nav a {
       text-decoration: none;
       color: #2b4c7e;
-      font-weight: 500;
+      font-weight: 600;
       transition: 0.2s ease;
     }
 
@@ -70,46 +45,53 @@
       color: #0b5cff;
     }
 
-    /* LAYOUT */
-    .container {
-      max-width: 950px;
-      margin: auto;
-      padding: 40px 20px 80px;
+    /* HERO */
+    .hero {
+      padding: 90px 20px;
     }
 
-    /* CARDS */
-    .card {
-      background: rgba(255,255,255,0.75);
-      border: 1px solid rgba(255,255,255,0.6);
-      backdrop-filter: blur(12px);
-      border-radius: 18px;
-      padding: 28px;
-      margin-bottom: 22px;
-
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    /* LOGO BLOCK */
+    .logo-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.10);
-    }
-
-    h2 {
-      font-size: 1.5rem;
+    .logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
       margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      color: #6b7c93;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* TEXT */
+    h1 {
+      font-size: 3rem;
       color: #0b2d5c;
+      margin-top: 10px;
     }
 
     p {
+      max-width: 650px;
+      margin: 15px auto;
       color: #4a5a70;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     /* BUTTON */
     .button {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 20px;
       padding: 12px 18px;
       border-radius: 12px;
       background: linear-gradient(135deg, #0b5cff, #3a8dff);
@@ -120,14 +102,14 @@
     }
 
     .button:hover {
-      transform: scale(1.04);
+      transform: scale(1.05);
       opacity: 0.95;
     }
 
     /* FOOTER */
     footer {
-      text-align: center;
-      padding: 30px;
+      margin-top: 60px;
+      padding: 20px;
       color: #6b7c93;
       font-size: 0.9rem;
     }
@@ -140,55 +122,35 @@
 
 <body>
 
-  <div class="hero">
-    <h1>VitalServe Initiative</h1>
-    <p>Student-led nonprofit delivering essential medical supplies to underserved communities through organized donation drives.</p>
-  </div>
-
+  <!-- NAV -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#mission">Mission</a>
-    <a href="#get-involved">Get Involved</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
   </nav>
 
-  <div class="container">
+  <!-- HERO -->
+  <div class="hero">
 
-    <section id="about" class="card">
-      <h2>About Us</h2>
-      <p>
-        VitalServe Initiative is a student-led nonprofit focused on collecting and distributing
-        medical supplies to communities in need. We aim to make healthcare access more equitable
-        through organized, local action.
-      </p>
-    </section>
+    <!-- LOGO + SUBTITLE -->
+    <div class="logo-wrapper">
+      <img src="logo.png" alt="VitalServe Logo" class="logo" />
+      <div class="subtitle">Non-Profit</div>
+    </div>
 
-    <section id="mission" class="card">
-      <h2>Our Mission</h2>
-      <p>
-        We work to reduce medical supply shortages by running donation drives, partnering with local groups,
-        and ensuring supplies reach people who need them most.
-      </p>
-    </section>
+    <h1>VitalServe Initiative</h1>
 
-    <section id="get-involved" class="card">
-      <h2>Get Involved</h2>
-      <p>
-        Join us by donating supplies, volunteering, or helping spread awareness in your community.
-      </p>
-      <a class="button" href="#contact">Join the Mission</a>
-    </section>
+    <p>
+      A student-led nonprofit dedicated to collecting and distributing essential medical supplies
+      to underserved communities through organized donation drives.
+    </p>
 
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>Email: vitalserve@example.com</p>
-      <p>Instagram: @vitalserveinitiative</p>
-    </section>
+    <a class="button" href="about.html">Learn More</a>
 
   </div>
 
+  <!-- FOOTER -->
   <footer>
-    © 2026 VitalServe Initiative • Built with purpose
+    © 2026 VitalServe Initiative
   </footer>
 
 </body>

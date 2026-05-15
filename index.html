@@ -5,24 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VitalServe Initiative</title>
 
+  <!-- Modern Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f8fb;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
       color: #1f2d3d;
+      line-height: 1.6;
     }
 
     header {
-      background: #0b3d91;
+      background: linear-gradient(135deg, #0b3d91, #1b6ef3);
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 70px 20px;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      font-weight: 700;
     }
 
     header p {
@@ -32,65 +43,83 @@
     }
 
     nav {
-      background: #082a63;
+      background: white;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 12px;
+      gap: 25px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 100;
     }
 
     nav a {
-      color: white;
       text-decoration: none;
-      font-weight: bold;
+      color: #0b3d91;
+      font-weight: 600;
+      transition: 0.2s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #1b6ef3;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
+      padding: 50px 20px;
     }
 
     h2 {
       color: #0b3d91;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
     }
 
     .card {
       background: white;
-      padding: 20px;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: all 0.25s ease;
+      margin-bottom: 30px;
+    }
+
+    /* ✨ Hover effect */
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 18px;
+      background: #1b6ef3;
+      color: white;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #0b3d91;
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       background: #0b3d91;
       color: white;
       margin-top: 40px;
     }
 
-    .button {
-      display: inline-block;
-      background: #0b3d91;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-
-    .button:hover {
-      background: #062252;
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -111,50 +140,41 @@
 
   <div class="container">
 
-    <section id="about" class="section">
+    <section id="about" class="card">
       <h2>About Us</h2>
-      <div class="card">
-        <p>
-          <strong>:contentReference[oaicite:0]{index=0}</strong>
-          is a student-led nonprofit focused on collecting and distributing medical supplies
-          to underserved communities. We believe access to basic healthcare resources should be a right, not a privilege.
-        </p>
-      </div>
+      <p>
+        VitalServe Initiative is a student-led nonprofit focused on collecting and distributing
+        medical supplies to underserved communities. We believe access to healthcare resources
+        should be a right, not a privilege.
+      </p>
     </section>
 
-    <section id="mission" class="section">
+    <section id="mission" class="card">
       <h2>Our Mission</h2>
-      <div class="card">
-        <p>
-          Our mission is to reduce medical supply shortages by organizing donation drives,
-          partnering with local communities, and delivering supplies where they are needed most.
-        </p>
-      </div>
+      <p>
+        Our mission is to reduce medical supply shortages by organizing donation drives,
+        partnering with local communities, and delivering supplies where they are needed most.
+      </p>
     </section>
 
-    <section id="get-involved" class="section">
+    <section id="get-involved" class="card">
       <h2>Get Involved</h2>
-      <div class="card">
-        <p>
-          You can help by donating supplies, volunteering, or spreading awareness about our cause.
-        </p>
-        <a class="button" href="#contact">Join Us</a>
-      </div>
+      <p>
+        Help us make a difference by donating supplies, volunteering, or spreading awareness.
+      </p>
+      <a class="button" href="#contact">Join Us</a>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="card">
       <h2>Contact</h2>
-      <div class="card">
-        <p>Email: vitalserve@example.com</p>
-        <p>Instagram: @vitalserveinitiative</p>
-        <p>We’re always open to partnerships and support.</p>
-      </div>
+      <p>Email: vitalserve@example.com</p>
+      <p>Instagram: @vitalserveinitiative</p>
     </section>
 
   </div>
 
   <footer>
-    <p>© 2026 VitalServe Initiative. All rights reserved.</p>
+    <p>© 2026 VitalServe Initiative</p>
   </footer>
 
 </body>

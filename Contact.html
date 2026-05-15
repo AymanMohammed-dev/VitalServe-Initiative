@@ -1,57 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact - VitalServe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | VitalServe Initiative</title>
+  <link rel="stylesheet" href="styles.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f8ff;
+    }
 
-<style>
-  * {margin:0; padding:0; box-sizing:border-box; font-family:Inter;}
-  body {background:#f6f9fc; color:#1e2a3a;}
+    nav {
+      background: #0b5cff;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
 
-  nav {
-    display:flex; justify-content:center; gap:30px;
-    padding:16px; background:white; border-bottom:1px solid #e6eaf0;
-  }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-  nav a {text-decoration:none; color:#2b4c7e; font-weight:600;}
-  nav a:hover {color:#0b5cff;}
+    nav a:hover {
+      opacity: 0.8;
+    }
 
-  .container {
-    max-width:700px;
-    margin:auto;
-    padding:60px 20px;
-    text-align:center;
-  }
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      text-align: center;
+    }
 
-  .card {
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  }
+    h1 {
+      font-size: 36px;
+      color: #0b5cff;
+      margin-bottom: 10px;
+    }
 
-  h1 {color:#0b2d5c; margin-bottom:15px;}
-  p {color:#4a5a70;}
-</style>
+    p {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      margin-top: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #0b5cff;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: #0847c7;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="donate.html">Donate</a>
-</nav>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html">Donate</a>
+  </nav>
 
-<div class="container">
-  <div class="card">
+  <!-- CONTENT -->
+  <div class="container">
+
     <h1>Contact Us</h1>
-    <p>Email: vitalserve@example.com</p>
+    <p>We would love to hear from you. Reach out or fill out our form below.</p>
+
+    <div class="card">
+      <h2>Get in Touch</h2>
+      <p>For questions, partnerships, or volunteering opportunities.</p>
+
+      <a class="button"
+         href="https://docs.google.com/forms/d/e/1FAIpQLSf9cpICxF_rFuPOWEh1sRYSPCjtqJ6y4XTLbPOpz5Z3yUpJSg/viewform"
+         target="_blank">
+        Open Google Form
+      </a>
+    </div>
+
   </div>
-</div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 VitalServe Initiative. All rights reserved.
+  </div>
 
 </body>
 </html>

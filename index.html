@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VitalServe Initiative</title>
 
-  <!-- Modern Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -19,105 +18,120 @@
     }
 
     body {
-      background: #f5f7fb;
-      color: #1f2d3d;
+      background: radial-gradient(circle at top, #eaf2ff, #f7f9fc);
+      color: #1e2a3a;
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, #0b3d91, #1b6ef3);
-      color: white;
+    /* HERO */
+    .hero {
       text-align: center;
-      padding: 70px 20px;
+      padding: 90px 20px 70px;
     }
 
-    header h1 {
-      font-size: 3rem;
+    .hero h1 {
+      font-size: 3.2rem;
       font-weight: 700;
+      letter-spacing: -1px;
+      color: #0b2d5c;
     }
 
-    header p {
-      margin-top: 10px;
+    .hero p {
+      margin-top: 12px;
       font-size: 1.2rem;
-      opacity: 0.9;
+      color: #4a5a70;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
+    /* NAV */
     nav {
-      background: white;
       display: flex;
       justify-content: center;
-      gap: 25px;
-      padding: 15px;
+      gap: 30px;
+      padding: 14px 20px;
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
       z-index: 100;
     }
 
     nav a {
       text-decoration: none;
-      color: #0b3d91;
-      font-weight: 600;
-      transition: 0.2s;
+      color: #2b4c7e;
+      font-weight: 500;
+      transition: 0.2s ease;
     }
 
     nav a:hover {
-      color: #1b6ef3;
+      color: #0b5cff;
     }
 
+    /* LAYOUT */
     .container {
-      max-width: 1000px;
+      max-width: 950px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 40px 20px 80px;
+    }
+
+    /* CARDS */
+    .card {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 22px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.10);
     }
 
     h2 {
-      color: #0b3d91;
-      margin-bottom: 15px;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #0b2d5c;
     }
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      transition: all 0.25s ease;
-      margin-bottom: 30px;
+    p {
+      color: #4a5a70;
     }
 
-    /* ✨ Hover effect */
-    .card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    }
-
+    /* BUTTON */
     .button {
       display: inline-block;
       margin-top: 15px;
       padding: 12px 18px;
-      background: #1b6ef3;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0b5cff, #3a8dff);
       color: white;
-      border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.2s;
+      transition: 0.2s ease;
     }
 
     .button:hover {
-      background: #0b3d91;
-      transform: scale(1.05);
+      transform: scale(1.04);
+      opacity: 0.95;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 25px;
-      background: #0b3d91;
-      color: white;
-      margin-top: 40px;
+      padding: 30px;
+      color: #6b7c93;
+      font-size: 0.9rem;
     }
 
-    /* Smooth scrolling */
     html {
       scroll-behavior: smooth;
     }
@@ -126,10 +140,10 @@
 
 <body>
 
-  <header>
+  <div class="hero">
     <h1>VitalServe Initiative</h1>
-    <p>Delivering essential medical supplies to communities in need</p>
-  </header>
+    <p>Student-led nonprofit delivering essential medical supplies to underserved communities through organized donation drives.</p>
+  </div>
 
   <nav>
     <a href="#about">About</a>
@@ -144,25 +158,25 @@
       <h2>About Us</h2>
       <p>
         VitalServe Initiative is a student-led nonprofit focused on collecting and distributing
-        medical supplies to underserved communities. We believe access to healthcare resources
-        should be a right, not a privilege.
+        medical supplies to communities in need. We aim to make healthcare access more equitable
+        through organized, local action.
       </p>
     </section>
 
     <section id="mission" class="card">
       <h2>Our Mission</h2>
       <p>
-        Our mission is to reduce medical supply shortages by organizing donation drives,
-        partnering with local communities, and delivering supplies where they are needed most.
+        We work to reduce medical supply shortages by running donation drives, partnering with local groups,
+        and ensuring supplies reach people who need them most.
       </p>
     </section>
 
     <section id="get-involved" class="card">
       <h2>Get Involved</h2>
       <p>
-        Help us make a difference by donating supplies, volunteering, or spreading awareness.
+        Join us by donating supplies, volunteering, or helping spread awareness in your community.
       </p>
-      <a class="button" href="#contact">Join Us</a>
+      <a class="button" href="#contact">Join the Mission</a>
     </section>
 
     <section id="contact" class="card">
@@ -174,7 +188,7 @@
   </div>
 
   <footer>
-    <p>© 2026 VitalServe Initiative</p>
+    © 2026 VitalServe Initiative • Built with purpose
   </footer>
 
 </body>

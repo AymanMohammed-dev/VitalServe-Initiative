@@ -47,7 +47,8 @@ nav a:hover {
 }
 
 .logo {
-  width: 120px;
+  width: 220px;
+  max-width: 80%;
   height: auto;
   margin-bottom: 10px;
 }
